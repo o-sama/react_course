@@ -6,12 +6,25 @@ class SearchBar extends React.Component {
   //     console.log(event.target.value);
   //   }
 
+  // Possible way to solve the issue with state of
+  // undefined when calling onFormSubmit
+  // constructor() {
+  //   this.onFormSubmit = this.onFormSubmit.bind(this);
+  // }
+
+  // Using arrow functions automatically binds this
+  onFormSubmit = event => {
+    event.preventDefault();
+
+    this.props.onSubmit(this.state.term);
+  };
+
   state = { term: "" };
 
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
             <label>Image Search</label>
             <input
