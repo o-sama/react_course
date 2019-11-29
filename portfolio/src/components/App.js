@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Skills from "./Skills";
-import Experience from "./Experience";
+// import Experience from "./Experience";
 import Education from "./Education";
 import Contact from "./Contact";
 import "../css/styles.css";
@@ -32,9 +32,9 @@ function App() {
       <section className="section-skills">
         <Skills />
       </section>
-      <section className="section-experience">
+      {/* <section className="section-experience">
         <Experience />
-      </section>
+      </section> */}
       <section className="section-education">
         <Education />
       </section>
